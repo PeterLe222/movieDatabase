@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie home page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="http://localhost/movie/index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a href="http://localhost/movie/index.php">Latest Movie</a></li>
+      <li><a href="http://localhost/movie/artist_detail.php">List Of Artists</a></li>
+      <li><a href="http://localhost/movie/contact.php">Contact Us</a></li>
+    </ul>
+    <div  class="nav navbar-nav navbar-right" >
+    <form class="form-inline" role="form" action="admin_login.php" method="post" >
+      <div class="form-group">
+    <input type="text" name="username" class="form-control" id="usr" placeholder="Username">
+    <input type="password" name="password" class="form-control" id="pwd" placeholder="Password">
+  </div>
+  <input type="submit" value="Login" name="login" class="btn btn-primary">
+  <input type="reset" value="Clear" class="btn btn-primary">
+  </form>
+</div>
+</div>
+</nav>
+
+  <form role="form" action="search.php" method="post" class="form-horizontal">
+
+      <div class="form-group">
+      <div class="col-sm-4">
+          <input class="form-control" id="ex2" type="text" name="movID" placeholder="Movie ID">
+      </div>
+      </div>
+
+      <div class="form-group">
+      <div class="col-sm-4">
+          <input class="form-control" id="ex2" type="text" name="movName" placeholder="Title">
+      </div>
+      </div>
+
+      <div class="form-group">
+      <div class="col-sm-4">
+          <input class="form-control" id="ex2" type="file"
+          name="image" accept="image/*" alt="Input"
+          placeholder="Image" data-toggle="tooltip" title="Poster's Movie">
+      </div>
+      </div>
+
+      <div class="form-group">
+
+      <div class="col-sm-4">
+          <select class="form-control" id="sel1" data-toggle="tooltip" title="Category" name="category">
+            <option></option>
+            <option>Action</option>
+            <option>Horror</option>
+            <option>Comedy</option>
+          </select>
+      </div>
+      </div>
+
+
+
+      <div class="form-group">
+      <div class="col-sm-4">
+        <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+          <input class="form-control" id="ex2" type="date" name="pubDate"
+          placeholder="Publish date" data-toggle="tooltip" title="Publish Date">
+      </div>
+      </div>
+
+      <div class="inline">
+      <div class="search">
+      <div class="col-sm-2">
+      	<input type="submit" value="Search" class="btn btn-primary">
+      </div>
+      </div>
+      </div>
+    </form>
+
+    <div class="footer">
+        &copy; Copyright 2016 - Peter
+    </div>
+  </div>
+  </body>
+
+</html>
